@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[credential]
+	helper = store
+[user]
+	email = spirit@programmer.net
+	name = Spirit
