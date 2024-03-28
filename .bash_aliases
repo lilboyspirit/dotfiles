@@ -8,7 +8,7 @@ alias code='code-oss'
 alias xu='doas xbps-install -S; doas xbps-install -uy xbps; doas xbps-install -u'
 alias xrm='doas xbps-remove -R'
 alias xd='xbps-query -x'
-alias xdr='xbps-query -X'
+alias xD='xbps-query -X'
 
 # Colorize
 alias ls='ls --color=auto'
