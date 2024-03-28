@@ -5,8 +5,8 @@ alias wget='wget -c'
 alias code='code-oss'
 
 # xbps
-alias xu='sudo xbps-install -S; sudo xbps-install -uy xbps; sudo xbps-install -u'
-alias xrm='sudo xbps-remove -R'
+alias xu='doas xbps-install -S; doas xbps-install -uy xbps; doas xbps-install -u'
+alias xrm='doas xbps-remove -R'
 alias xd='xbps-query -x'
 alias xdr='xbps-query -X'
 
