@@ -4,6 +4,10 @@ alias vi='vim'
 alias wget='wget -c'
 alias code='code-oss'
 
+# power managment
+alias poweroff='doas poweroff'
+alias reboot='doas reboot'
+
 # xbps
 alias xi='doas xbps-install -S'
 alias xrs='xbps-query -Rs'
