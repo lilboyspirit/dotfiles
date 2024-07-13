@@ -1,8 +1,8 @@
-#!/bin/bash
+#.bashrc
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-  source /etc/bashrc
+  . /etc/bashrc
 fi
 
 # User specific environment
