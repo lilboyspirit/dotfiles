@@ -1,16 +1,39 @@
 # .bashrc
 
-export PATH=$PATH:$HOME/.local/bin
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+  PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
 
 # If not running interactively, skip the rest
 [[ $- != *i* ]] && return
 
 PS1='[\u@\h \W]\$ '
 
-# Infinite history
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
 HISTSIZE= HISTFILESIZE=
 
-# Auto cd
 shopt -s autocd
 
 source $HOME/.bash_aliases
+
+if [ -d ~/.bashrc.d ]; then
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
+    done
+fi
+
+unset rc
